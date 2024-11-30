@@ -2,9 +2,10 @@ extends CharacterBody2D
 class_name Player
 
 const FRICTION: float = 2
-const SPEED_FACTOR: float = 40
+const SPEED_FACTOR: float = 1
 
-@export var speed: float = 20
+@export var speed: float = 1
+@export var speed_scale: float = 1000
 
 var mouse_position: Vector2
 var direction: Vector2
@@ -20,10 +21,14 @@ func _process(delta: float) -> void:
 	look_at(mouse_position)
 	if Input.is_action_pressed("move") and position != mouse_position:
 		direction = (mouse_position - position).normalized()
-		velocity = direction * speed
-		scale = lerp(scale, Vector2(1/speed * 20, 1/speed), delta * FRICTION)
+		velocity = direction * speed * speed_scale
+		scale = lerp(scale, get_squash_scale(), delta * FRICTION)
 	else:
 		velocity = lerp(velocity, Vector2.ZERO, delta * FRICTION)
 		scale = lerp(scale, Vector2.ONE, delta * FRICTION)
 	
 	move_and_slide()
+
+func get_squash_scale()->Vector2:
+	var ratio = speed/SPEED_FACTOR
+	return Vector2(ratio, 1/ratio)
