@@ -21,7 +21,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move") and position != mouse_position:
 		direction = (mouse_position - position).normalized()
 		velocity = direction * speed
+		scale = lerp(scale, Vector2(1/speed * 20, 1/speed), delta * FRICTION)
 	else:
 		velocity = lerp(velocity, Vector2.ZERO, delta * FRICTION)
-	print(velocity)
+		scale = lerp(scale, Vector2.ONE, delta * FRICTION)
+	
 	move_and_slide()
