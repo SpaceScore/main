@@ -30,5 +30,8 @@ func _process(delta: float) -> void:
 	move_and_slide()
 
 func get_squash_scale()->Vector2:
-	var ratio = speed/SPEED_FACTOR
+	var ratio = get_speed_ratio()
 	return Vector2(ratio, 1/ratio)
+
+func get_speed_ratio():
+	return speed/SPEED_FACTOR
