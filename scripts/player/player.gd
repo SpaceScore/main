@@ -3,12 +3,16 @@ class_name Player
 
 const FRICTION: float = 2
 const SPEED_FACTOR: float = 1
+const SQUASH_OFFSET: float = 0.65
 
 @export var speed: float = 1
 @export var speed_scale: float = 1000
 
 var mouse_position: Vector2
 var direction: Vector2
+
+func _ready() -> void:
+	Globals.player = self
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("accelerate"):
@@ -31,7 +35,10 @@ func _process(delta: float) -> void:
 
 func get_squash_scale()->Vector2:
 	var ratio = get_speed_ratio()
-	return Vector2(ratio, 1/ratio)
+	return Vector2(ratio * SQUASH_OFFSET, 1/ratio)
 
 func get_speed_ratio():
 	return speed/SPEED_FACTOR
+
+func get_display_speed():
+	return speed * 100

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfqf0bv4q5nc0"]
+
+[ext_resource type="PackedScene" uid="uid://bq2xhpahinokh" path="res://scenes/UI/speed_label.tscn" id="1_b04l3"]
+[ext_resource type="PackedScene" uid="uid://dt5b1ilfxyi2n" path="res://scenes/UI/runtime_label.tscn" id="2_dt8pd"]
+
+[node name="ui" type="CanvasLayer"]
+
+[node name="speed_label" parent="." instance=ExtResource("1_b04l3")]
+offset_left = 997.0
+offset_top = 570.0
+offset_right = 1049.0
+offset_bottom = 610.0
+
+[node name="runtime_label" parent="." instance=ExtResource("2_dt8pd")]
