@@ -5,7 +5,7 @@ class_name Leaderboard_Component
 # "987dbd0b9e5eb3749072acc47a210996eea9feb0"
 var game_API_key = "dev_c093b892aa884b069549b58814d00865"
 var development_mode = true
-var leaderboard_key = "speed_jam_key_2"
+var leaderboard_key = "speed_jam_key"
 var session_token = ""
 var score = 0
 
