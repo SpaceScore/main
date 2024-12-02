@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://td6xkxkq66sp"]
+
+[ext_resource type="Script" path="res://scripts/leaderboard/score_entry.gd" id="1_altql"]
+
+[node name="score_entry" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 30
+script = ExtResource("1_altql")
+
+[node name="name_label" type="Label" parent="."]
+layout_mode = 2
+text = "Name Here"
+
+[node name="score_label" type="Label" parent="."]
+layout_mode = 2
+text = "Score"
+horizontal_alignment = 2

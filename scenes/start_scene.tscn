@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl1tyjcofa7c2"]
+
+[ext_resource type="Script" path="res://scripts/start_scene.gd" id="1_of8yp"]
+[ext_resource type="PackedScene" uid="uid://dnndqh8ekqagf" path="res://scenes/leaderboard_component.tscn" id="2_jth7p"]
+
+[node name="start_game_page" type="Node2D"]
+script = ExtResource("1_of8yp")
+
+[node name="leaderboard_component" parent="." instance=ExtResource("2_jth7p")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="score_panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -283.0
+offset_right = 226.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/score_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/score_panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="start_button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 147.0
+offset_right = 128.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[connection signal="pressed" from="CanvasLayer/start_button" to="." method="_on_start_button_pressed"]

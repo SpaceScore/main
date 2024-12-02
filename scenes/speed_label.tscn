@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq2xhpahinokh"]
+
+[ext_resource type="Script" path="res://scripts/ui/speed_label.gd" id="1_edfd8"]
+
+[node name="speed_label" type="Label"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_edfd8")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="timeout"]

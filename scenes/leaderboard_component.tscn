@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnndqh8ekqagf"]
+
+[ext_resource type="Script" path="res://scripts/leaderboard/leaderboard.gd" id="1_cokp4"]
+
+[node name="leaderboard_component" type="Node"]
+script = ExtResource("1_cokp4")

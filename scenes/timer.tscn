@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cosij5k7iwe6l"]
+
+[ext_resource type="Script" path="res://scripts/run_timer.gd" id="1_wxm4l"]
+
+[node name="run_timer" type="Timer"]
+script = ExtResource("1_wxm4l")
