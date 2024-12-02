@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c20s7doqd05u6"]
+[gd_scene load_steps=4 format=3 uid="uid://c20s7doqd05u6"]
 
 [ext_resource type="Script" path="res://scripts/leaderboard/score_submission_scene.gd" id="1_al6sg"]
 [ext_resource type="PackedScene" uid="uid://dnndqh8ekqagf" path="res://scenes/leaderboard_component.tscn" id="2_6x2k3"]
+[ext_resource type="FontFile" uid="uid://cfma0rkwcmu7k" path="res://assets/Born2bSportyV2.ttf" id="3_phuhg"]
 
 [node name="leaderboard_submission" type="Node2D"]
 script = ExtResource("1_al6sg")
@@ -19,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="score_label" type="Label" parent="CanvasLayer/submit_form"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -31,9 +33,12 @@ offset_right = 44.0
 offset_bottom = -83.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_phuhg")
+theme_override_font_sizes/font_size = 64
 text = "Your Time: "
 
 [node name="name_entry" type="LineEdit" parent="CanvasLayer/submit_form"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,21 +51,26 @@ offset_right = 169.0
 offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_phuhg")
+theme_override_font_sizes/font_size = 32
 placeholder_text = "Enter your name"
 
 [node name="submit_button" type="Button" parent="CanvasLayer/submit_form"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -162.0
-offset_top = 140.0
-offset_right = 156.0
-offset_bottom = 207.0
+offset_left = -186.0
+offset_top = 138.0
+offset_right = 192.0
+offset_bottom = 242.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_phuhg")
+theme_override_font_sizes/font_size = 64
 text = "Submit Score"
 
 [node name="loading_page" type="Control" parent="CanvasLayer"]
@@ -79,9 +89,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/loading_page"]
+texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_phuhg")
+theme_override_font_sizes/font_size = 32
 text = "Loading..."
 
 [connection signal="pressed" from="CanvasLayer/submit_form/submit_button" to="." method="_on_submit_button_pressed"]

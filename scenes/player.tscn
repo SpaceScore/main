@@ -4,14 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bnoo6mwrgoe3v" path="res://assets/Slime.png" id="2_f7ov1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8sr6u"]
-radius = 42.0
+radius = 80.1561
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_g3u70")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-5, -5)
-scale = Vector2(0.1, 0.1)
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-17, -6)
+rotation = 0.113277
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_f7ov1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq2xhpahinokh"]
+[gd_scene load_steps=3 format=3 uid="uid://bq2xhpahinokh"]
 
 [ext_resource type="Script" path="res://scripts/ui/speed_label.gd" id="1_edfd8"]
+[ext_resource type="FontFile" uid="uid://cfma0rkwcmu7k" path="res://assets/Born2bSportyV2.ttf" id="1_rvy7e"]
 
 [node name="speed_label" type="Label"]
+texture_filter = 1
 offset_left = -52.0
 offset_top = -12.0
 offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("1_rvy7e")
+theme_override_font_sizes/font_size = 32
 text = "Speed:"
 script = ExtResource("1_edfd8")
 

@@ -10,7 +10,7 @@ var upload_status: int = 0
 
 func _ready() -> void:
 	## DEBUG TESTING
-	Globals.saved_time = 20.5
+	#Globals.saved_time = 20.5
 	
 	## Code
 	score_label.text = "Your Time: " + str(Globals.saved_time)

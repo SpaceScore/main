@@ -17,8 +17,7 @@ func display_leaderboard(json):
 			var new_entry: Score_Entry = score_entry.instantiate()
 			vbox.add_child(new_entry)
 			new_entry.set_data(name, score)
-			
 
 
 func _on_start_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/player_test_scene.tscn")

@@ -5,6 +5,8 @@ const FRICTION: float = 2
 const SPEED_FACTOR: float = 1
 const SQUASH_OFFSET: float = 0.65
 
+const MAX = 10
+
 @export var speed: float = 1
 @export var speed_scale: float = 1000
 
@@ -15,7 +17,7 @@ func _ready() -> void:
 	Globals.player = self
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("accelerate"):
+	if Input.is_action_just_pressed("accelerate") and speed < MAX:
 		speed += SPEED_FACTOR
 	if Input.is_action_just_pressed("decelerate") and speed - SPEED_FACTOR > 0:
 		speed -= SPEED_FACTOR

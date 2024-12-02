@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfqf0bv4q5nc0"]
+[gd_scene load_steps=5 format=3 uid="uid://bfqf0bv4q5nc0"]
 
 [ext_resource type="PackedScene" uid="uid://bq2xhpahinokh" path="res://scenes/UI/speed_label.tscn" id="1_b04l3"]
 [ext_resource type="PackedScene" uid="uid://dt5b1ilfxyi2n" path="res://scenes/UI/runtime_label.tscn" id="2_dt8pd"]
+[ext_resource type="PackedScene" uid="uid://cnx7l3ub2s5rp" path="res://scenes/keys_label.tscn" id="3_nb4r5"]
+[ext_resource type="FontFile" uid="uid://cfma0rkwcmu7k" path="res://assets/Born2bSportyV2.ttf" id="4_rkunr"]
 
 [node name="ui" type="CanvasLayer"]
 
@@ -12,3 +14,16 @@ offset_right = 1049.0
 offset_bottom = 610.0
 
 [node name="runtime_label" parent="." instance=ExtResource("2_dt8pd")]
+offset_left = 27.0
+offset_top = 15.0
+offset_right = 67.0
+offset_bottom = 38.0
+
+[node name="keys_label" parent="." instance=ExtResource("3_nb4r5")]
+texture_filter = 1
+offset_left = 47.0
+offset_top = 582.0
+offset_right = 87.0
+offset_bottom = 605.0
+theme_override_fonts/font = ExtResource("4_rkunr")
+theme_override_font_sizes/font_size = 32

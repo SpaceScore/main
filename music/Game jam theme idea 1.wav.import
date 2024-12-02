@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mm424cv0tj65"
+path="res://.godot/imported/Game jam theme idea 1.wav-de8788843fed5b01f3ac5f4039ef261a.sample"
+
+[deps]
+
+source_file="res://music/Game jam theme idea 1.wav"
+dest_files=["res://.godot/imported/Game jam theme idea 1.wav-de8788843fed5b01f3ac5f4039ef261a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

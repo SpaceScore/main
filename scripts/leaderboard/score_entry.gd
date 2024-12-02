@@ -6,5 +6,5 @@ class_name Score_Entry
 
 func set_data(name: String, score: String):
 	name_label.text = name
-	score_label.text = score
+	score_label.text = score + " seconds"
 	
