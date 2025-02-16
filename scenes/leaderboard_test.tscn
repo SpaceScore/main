@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20s7doqd05u6"]
+
+[ext_resource type="Script" path="res://scripts/leaderboard/leaderboard.gd" id="1_0da0c"]
+[ext_resource type="Script" path="res://scripts/leaderboard/score_submission_scene.gd" id="1_qf5id"]
+
+[node name="leaderboard_test" type="Node2D"]
+script = ExtResource("1_qf5id")
+
+[node name="leaderboard_component" type="Node" parent="."]
+script = ExtResource("1_0da0c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="score_label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -106.0
+offset_right = 44.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your Time: "
+
+[node name="name_entry" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = 34.0
+offset_right = 169.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter your name"
+
+[node name="submit_button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = 140.0
+offset_right = 156.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Submit Score"
+
+[connection signal="pressed" from="CanvasLayer/Control/submit_button" to="." method="_on_submit_button_pressed"]
